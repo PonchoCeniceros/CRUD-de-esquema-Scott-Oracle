@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Proyecto Diseño de bases de datos II</title>
+    <meta charset="UTF-8" name="description" />
+    <link rel="stylesheet" href="{{url_for('static', filename='mainpage.css')}}">
+</head>
+
+<body>
+    <div class="MainBorder">
+        <div class="MainPage">
+
+            <!-- header -->
+            <header class="MyHeader">
+                <h1>Departamentos</h1>
+                <!-- <div class="MyNav" /> -->
+            </header>
+
+            <section>
+                <div class="BorderArticle">
+                    <!-- mostrar los datos leidos -->
+                    {% for row in rows %}
+                    <tr>
+                        {{row[0]}}&nbsp;{{row[1]}}&nbsp;{{row[2]}}<br>
+                    </tr>
+                    {% endfor %}
+                    <br><br>
+
+                    <form action="/" method="get" enctype="multipart/form-data">
+                        <button name="ret_bttn" type="submit">regresar</button>
+                    </form>
+                </div>
+            </section>
+
+            <!-- pie de pagina -->
+            <footer class="MyFooter">
+                Giovanny Alfonso Chávez Ceniceros - Diseño de bases de datos II - Octubre 2020
+            </footer>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

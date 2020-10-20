@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Proyecto Diseño de bases de datos II</title>
+    <meta charset="UTF-8" name="description" />
+    <link rel="stylesheet" href="{{url_for('static', filename='mainpage.css')}}">
+</head>
+
+<body>
+    <div class="MainBorder">
+        <div class="MainPage">
+
+            <!-- header -->
+            <header class="MyHeader">
+                <h1>CRUD del esquema Scott</h1>
+                <div class="MyNav" />
+            </header>
+
+            <section>
+                <div class="BorderArticle">
+                    <!-- operación a realizar sobre la base de datos -->
+                    <!-- <div class="BorderDatetime"></div> -->
+                    <div class="MyArticle">
+                        <h1>Insertar/actualizar empleado</h1>
+                        <!-- seccion HTTP -->
+                        <form action="/insert_update_emp/" method="post" enctype="multipart/form-data">
+                            <label>&nbsp;número de empleado: </label>
+                            <input class="MyInput" type="text" name="empno"><br><br>
+
+                            <label>nombre del empleado:</label> <input type="text" name="ename"><br><br>
+                            <label>&nbsp;&nbsp;puesto de trabajo:</label> <input type="text" name="job"><br><br>
+                            <label>&nbsp;id de jefe directo:</label> <input type="text" name="mgr"><br><br>
+                            <label>salario de empleado:</label> <input type="text" name="sal"><br><br>
+                            <label>comisión por ventas:</label> <input type="text" name="comm"><br><br>
+                            <label>id del departamento:</label> <input type="text" name="deptno"><br><br>
+                            <label>fecha de contratato:</label> <input type="date" name="hiredate"><br><br>
+                            <button name="insert_emp_bttn" type="submit" value="clicked">&nbsp;insertar
+                                empleado&nbsp;</button>
+                            <button name="update_emp_bttn" type="submit" value="clicked">actualizar empleado</button>
+                        </form>
+                    </div>
+
+                    <!-- operación a realizar sobre la base de datos -->
+                    <div class="BorderDatetime"></div>
+                    <div class="MyArticle">
+                        <h1>Eliminar empleado</h1>
+                        <!-- seccion HTTP -->
+                        <form action="/delete_emp/" method="post" enctype="multipart/form-data">
+                            <label>&nbsp;número de empleado: </label> <input type="text" name="empno"><br><br>
+                            <button name="delete_emp_bttn" type="submit">&nbsp;eliminar empleado&nbsp;</button>
+                        </form>
+                    </div>
+                </div>
+
+            </section>
+
+            <!-- contenido relacionado -->
+            <aside class="MyAside">
+                <h1>Mostrar base de datos</h1><br>
+                <!-- seccion HTTP -->
+                <form action="/show_dept/" method="get" enctype="multipart/form-data">
+                    <button name="show_dept_bttn" type="submit">mostrar departamentos</button><br><br>
+                </form>
+
+                <!-- seccion HTTP -->
+                <form action="/show_emps/" method="get" enctype="multipart/form-data">
+                    <button name="show_emp_bttn" type="submit">&nbsp;&nbsp;mostrar
+                        empleados&nbsp;&nbsp;</button><br><br>
+                </form>
+
+                <h1>Acceder a deptos</h1><br>
+                <!-- seccion HTTP -->
+                <form action="/" method="get" enctype="multipart/form-data">
+                    <button name="idx_emp_bttn" type="submit">&nbsp;CRUD
+                        departamentos&nbsp;&nbsp;</button><br><br>
+                </form>
+
+
+            </aside>
+
+            <!-- pie de pagina -->
+            <footer class="MyFooter">
+                Giovanny Alfonso Chávez Ceniceros - Diseño de bases de datos II - Octubre 2020
+            </footer>
+
+
+        </div>
+    </div>
+</body>
+
+</html>

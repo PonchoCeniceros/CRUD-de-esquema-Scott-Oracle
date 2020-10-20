@@ -1,0 +1,89 @@
+* {
+    margin: 0%;
+    padding: 0%;
+    font-family: monospace; /* tipo de letra */
+    /* border: 1px solid blue; */
+}
+
+.MainBorder {
+    padding: 10px;
+}
+
+.MainPage {
+    background: whitesmoke; /* color de fondo */
+    margin: auto;
+    width: 960px;
+    padding: 10px;
+}
+
+/* Header */
+.MyHeader {
+    padding: 5px;
+}
+
+/* Navegador */
+.MyNav {
+    padding: 1px 15px;
+    border-bottom: 2px solid black;
+    padding-bottom: 20px; 
+}
+
+.MyNav li {
+    list-style: none;
+    padding: 5px;
+    display: inline-block;
+    /* fuente */
+    font-size: 14px;
+    font-family: monospace; 
+}
+
+/* Titulos */
+h1 {
+    font-size: 20px; /* tamaño de letra */
+    font-weight: bold; /* remarcado */
+}
+
+.BorderArticle {
+    background: whitesmoke;
+    margin: auto;
+    float: left; /* floto toda mi seccion de articulos hacia la izquierda */
+    width: 700px;
+    padding: 6px;
+    padding-bottom: 15px;   
+}
+
+.BorderDatetime {
+    background: whitesmoke;
+    margin: auto;
+    padding: 6px;
+    padding-bottom: 15px;   
+}
+
+.MyArticle {
+    background: Gainsboro;
+    margin: auto;
+    padding: 10px;
+}
+
+
+.MyArticle h1 {
+    font-size: 20px; /* tamaño de letra */
+    font-weight: bold; /* remarcado */
+    padding-bottom: 20px;
+}
+
+.MyAside {
+    background: whitesmoke;
+    float: left; /* floto toda mi seccion de articulos hacia la izquierda */
+    width: 215px;
+    padding: 10px;
+    padding-bottom: 15px;  
+}
+
+/* Footer */
+.MyFooter {
+    clear: both; /* corrijo el efecto de flote de la seccion de articulos que se encuentra arriba */
+    padding: 1px 15px;
+    border-top: 2px solid black;
+    text-align: center;
+}

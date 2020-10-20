@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Proyecto Diseño de bases de datos II</title>
+    <meta charset="UTF-8" name="description" />
+    <link rel="stylesheet" href="{{url_for('static', filename='mainpage.css')}}">
+</head>
+
+<body>
+    <div class="MainBorder">
+        <div class="MainPage">
+
+            <!-- header -->
+            <header class="MyHeader">
+                <h1>CRUD del esquema Scott</h1>
+                <div class="MyNav" />
+            </header>
+
+            <section>
+                <div class="BorderArticle">
+                    <!-- operación a realizar sobre la base de datos -->
+                    <!-- <div class="BorderDatetime"></div> -->
+                    <div class="MyArticle">
+                        <h1>Insertar/actualizar departamento</h1>
+                        <!-- seccion HTTP -->
+                        <form action="/insert_update_dept/" method="post" enctype="multipart/form-data">
+                            <label>número de depto: </label> <input type="text" name="deptno"><br><br>
+                            <label>nombre de depto: </label> <input type="text" name="dname"><br><br>
+                            <label>&nbsp;&nbsp;&nbsp;localización: </label> <input type="text" name="loc"><br><br>
+                            <button name="insert_depto_bttn" type="submit" value="clicked">&nbsp;insertar
+                                depto&nbsp;</button>
+                            <button name="update_depto_bttn" type="submit" value="clicked">actualizar depto</button>
+                        </form>
+                    </div>
+
+                    <!-- operación a realizar sobre la base de datos -->
+                    <div class="BorderDatetime"></div>
+                    <div class="MyArticle">
+                        <h1>Eliminar departamento</h1>
+                        <!-- seccion HTTP -->
+                        <form action="/delete_dept/" method="post" enctype="multipart/form-data">
+                            <label>número del depto: </label> <input type="text" name="deptno"><br><br>
+                            <button name="delete_depto_bttn" type="submit">eliminar el depto</button>
+                        </form>
+                    </div>
+
+                    <!-- operación a realizar sobre la base de datos -->
+                    <div class="BorderDatetime"></div>
+                    <div class="MyArticle">
+                        <h1>Número de emplados por departamento</h1>
+                        <!-- seccion HTTP -->
+                        <form action="/noEmp_depto/" method="post" enctype="multipart/form-data">
+                            <label>&nbsp;número de depto: </label> <input type="text" name="deptno"><br><br>
+                            <button name="noEmp_depto_bttn" type="submit">obtener respuesta</button>
+                        </form>
+                    </div>
+
+                </div>
+
+            </section>
+
+            <!-- contenido relacionado -->
+            <aside class="MyAside">
+                <h1>Mostrar base de datos</h1><br>
+                <!-- seccion HTTP -->
+                <form action="/show_dept/" method="get" enctype="multipart/form-data">
+                    <button name="show_dept_bttn" type="submit">mostrar departamentos</button><br><br>
+                </form>
+
+                <!-- seccion HTTP -->
+                <form action="/show_emps/" method="get" enctype="multipart/form-data">
+                    <button name="show_emp_bttn" type="submit">&nbsp;&nbsp;mostrar
+                        empleados&nbsp;&nbsp;</button><br><br>
+                </form>
+
+                <h1>Acceder a empleados</h1><br>
+                <!-- seccion HTTP -->
+                <form action="/emp/" method="get" enctype="multipart/form-data">
+                    <button name="idx_emp_bttn" type="submit">&nbsp;&nbsp;CRUD de empleados&nbsp;&nbsp;</button><br><br>
+                </form>
+
+
+            </aside>
+
+            <!-- pie de pagina -->
+            <footer class="MyFooter">
+                Giovanny Alfonso Chávez Ceniceros - Diseño de bases de datos II - Octubre 2020
+            </footer>
+
+
+        </div>
+    </div>
+</body>
+
+</html>
